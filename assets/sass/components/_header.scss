@@ -1,0 +1,303 @@
+/******Header Start*********/
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent;
+  .header-top {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0px;
+    gap: 22px;
+    border-bottom: 1px solid rgba($white-color, 0.3%);
+    .icon {
+      display: inline-block;
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    a {
+      padding: 5px 0;
+      font-size: 18px;
+      color: $white-color;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    @include screen-768 {
+      display: none;
+    }
+  }
+  .header-nav {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-logo {
+      color: $white-color;
+      font-size: 36px;
+      font-weight: 700;
+      font-family: $heading-font;
+      text-transform: uppercase;
+      @include screen-460 {
+        font-size: 30px;
+      }
+    }
+    .nav {
+      display: flex;
+      gap: 50px;
+      margin-left: 205px;
+      li {
+        a {
+          color: $white-color;
+          font-size: 18px;
+          font-weight: 700;
+          text-transform: uppercase;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 3px;
+            background: $white-color;
+            transition: 0.3s;
+            opacity: 0;
+            top: 100%;
+            left: 50%;
+          }
+          &:hover {
+            &::after {
+              width: 100%;
+              left: 0;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      @include large-screen {
+        margin-left: 100px;
+      }
+      @include screen-992 {
+        display: none;
+      }
+    }
+    .user-cart {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      a {
+        img {
+          width: 22px;
+          height: 23px;
+          transition: 0.3s;
+        }
+        &:hover {
+          img {
+            animation: 0.3s toLeftFromRight forwards;
+          }
+        }
+      }
+      @include screen-460 {
+        display: none !important;
+      }
+    }
+    .mobile-menu-icon {
+      margin-left: 30px;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $white-color;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+
+      span:first-child {
+        width: 100%;
+        transform: rotate(0deg);
+      }
+      span:nth-child(2) {
+        width: 80%;
+        align-self: end;
+      }
+      span:last-child {
+        width: 50%;
+        align-self: end;
+      }
+      &.active {
+        span:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        span:nth-child(2) {
+          opacity: 0;
+        }
+        span:nth-child(3) {
+          width: 100%;
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+      @include screen-992 {
+        display: flex;
+      }
+    }
+  }
+}
+/******* Sticky header***********/
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  animation: 1s custom-fadeInDown;
+  background-color: $white-color;
+  .container {
+    max-width: 100%;
+    padding: 0;
+    background-color: $white-color;
+
+    .content-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      .top {
+        display: none !important;
+      }
+      .bottom {
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  }
+}
+//********** Mobile menu **********//
+.mobile-menu {
+  position: fixed;
+  background: $white-color;
+  top: 0;
+  left: -350px;
+  width: 330px;
+  height: 100vh;
+  transition: all 0.3s;
+
+  &.active {
+    left: 0 !important;
+  }
+  .top {
+    background: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px;
+    .mobile-logo {
+      a {
+        color: $white-color;
+        font-size: 25px;
+        font-weight: 700;
+        font-family: $heading-font;
+        text-transform: uppercase;
+      }
+    }
+    .mobile-menu-icon {
+      margin-left: 30px;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $white-color;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+
+      span:first-child {
+        width: 100%;
+        transform: rotate(0deg);
+      }
+      span:nth-child(2) {
+        width: 80%;
+        align-self: end;
+      }
+      span:last-child {
+        width: 50%;
+        align-self: end;
+      }
+      &.active {
+        span:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        span:nth-child(2) {
+          opacity: 0;
+        }
+        span:nth-child(3) {
+          width: 100%;
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+      @include screen-992 {
+        display: flex;
+      }
+    }
+  }
+
+  .mobile-nav {
+    padding: 25px;
+    li {
+      a {
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 600;
+        width: 100%;
+        padding: 10px 0;
+        display: flex;
+        transition: 0.3s;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        .icon {
+          display: inline-block;
+          transform: rotate(0deg);
+          transition: all 0.3s;
+        }
+        &:hover {
+          color: $secondary-color;
+          padding-left: 10px;
+          .icon {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+  form {
+    padding: 23px;
+    input {
+      width: 100%;
+      border: 1px solid $secondary-color;
+      padding: 10px;
+      border-radius: 12px;
+    }
+    a {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

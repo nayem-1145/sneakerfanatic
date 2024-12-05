@@ -1,0 +1,149 @@
+/********* Footer *********/
+
+/******** Footer Top Start *******/
+.footer-section {
+  background-color: $footer-top-bg;
+}
+
+.footer-top {
+  padding: 47px 0 20px 0;
+}
+
+.footer-title {
+  h3 {
+    font-size: 35px;
+    line-height: 45px;
+    max-width: 270px;
+    margin-bottom: 28px;
+  }
+}
+
+.footer-email {
+  gap: 30px;
+  max-width: 260px;
+  border-bottom: 1px solid $secondary-color;
+
+  input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: $body-font;
+  }
+}
+
+.footer-widget {
+  span {
+    color: $primary-color;
+    font-size: 20px;
+    line-height: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .footer-content {
+    margin-top: 40px;
+    @include screen-400 {
+      margin-top: 20px;
+    }
+    li {
+      margin-bottom: 15px;
+
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 40px;
+        font-family: $body-font;
+        color: $primary-color;
+        transition: 0.3s;
+        @include screen-400 {
+          font-size: 14px;
+        }
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/******** Footer Top End *******/
+
+/******** Footer Bottom Start *******/
+.footer-bottom-bg {
+  left: 0;
+  top: -34px;
+  object-fit: cover;
+  width: 100%;
+  z-index: 1;
+}
+
+.footer-bottom-bg-two {
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  z-index: 2;
+}
+
+.footer-bottom-content {
+  padding: 80px 0 40px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.footer-bottom-copyright {
+  p {
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    font-family: $body-font;
+
+    a {
+      color: $white-color;
+      transition: 0.3s;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.footer-logo {
+  gap: 10px;
+}
+
+.footer-thumb {
+  border: 1px solid $white-color;
+  border-radius: 6px;
+  padding: 5px 8px;
+  &:hover {
+    border-color: $primary-color;
+  }
+}
+.footer-privacy {
+  gap: 6px;
+
+  li {
+    color: $white-color;
+
+    a {
+      color: $white-color;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      font-family: $body-font;
+    }
+  }
+}
+
+/******** Footer Bottom End *******/

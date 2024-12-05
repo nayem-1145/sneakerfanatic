@@ -1,0 +1,28 @@
+/*
+Theme Name: Sneakerfanatic - HTML Template
+Author: WebritoTheme
+Author URI: https://themeforest.net/user/webritotheme
+Tags:  Sneakerfanatic
+Description: Sneakerfanatic - HTML Template
+Version: 1.1.0
+*/
+
+/************************************** base css **************************************/
+@import "base/variables";
+@import "base/mixin";
+@import "base/reset";
+@import "base/typography";
+@import "base/spacing";
+
+/******************************** components ******************************/
+@import "components/header";
+@import "components/footer";
+@import "components/button";
+
+/****************************** page styles ******************************/
+@import "pages/style-1.scss";
+
+/******************************* theme css **********************************/
+@import "theme/theme-class";
+@import "theme/preloader";
+@import "theme/animations";

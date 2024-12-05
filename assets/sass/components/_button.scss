@@ -1,0 +1,64 @@
+.template-btn {
+  width: 178px;
+  height: 57px;
+  font-size: 22px;
+  font-family: $heading-font;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.primary-btn {
+  background-color: $secondary-color;
+  color: $white-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -90px;
+    top: -135%;
+    width: 190%;
+    height: 135%;
+    background-color: #000;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  &:hover {
+    background-color: transparent;
+    &::before {
+      top: -10px;
+    }
+  }
+}
+.white-btn {
+  background-color: $white-color;
+  color: $secondary-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -90px;
+    top: -135%;
+    width: 190%;
+    height: 135%;
+    background-color: #000;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  &:hover {
+    background-color: transparent;
+    &::before {
+      top: -10px;
+    }
+  }
+}
