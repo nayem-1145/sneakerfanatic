@@ -892,9 +892,6 @@
   border: 1px solid var(--primary-color);
   border-top: none;
   position: relative;
-  @include screen-460 {
-    width: 36%;
-  }
   .reviews-icon {
     display: flex;
     justify-content: center;
@@ -1019,6 +1016,7 @@
     }
   }
   @include large-screen {
+    text-align: center;
     &::after {
       display: none;
     }

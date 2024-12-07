@@ -6,9 +6,6 @@ Tags:  Sneakerfanatic
 Description: Sneakerfanatic - HTML Template
 Version: 1.1.0
 */
-
-
-
 /************************************** base css **************************************/
 /******* Google Fonts *********/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -723,7 +720,7 @@ header .header-nav .mobile-menu-icon.active span:nth-child(3) {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(var(--primary-color), 0.3%);
+  border-bottom: 1px solid rgba(243, 105, 7, 0.2);
 }
 
 .mobile-menu .mobile-nav li a .icon {
@@ -2296,12 +2293,6 @@ header .header-nav .mobile-menu-icon.active span:nth-child(3) {
   position: relative;
 }
 
-@media (max-width: 460px) {
-  .table-footer {
-    width: 36%;
-  }
-}
-
 .table-footer .reviews-icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2463,6 +2454,10 @@ header .header-nav .mobile-menu-icon.active span:nth-child(3) {
 }
 
 @media (max-width: 1199.98px) {
+  .pf-feature-card {
+    text-align: center;
+  }
+
   .pf-feature-card::after {
     display: none;
   }
