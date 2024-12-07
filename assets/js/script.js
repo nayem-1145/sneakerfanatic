@@ -1,7 +1,7 @@
 $(function () {
-  //////////
+
   new WOW().init();
-  ///////////////
+
   //header sticky
   $(window).on("scroll", function () {
     var scrollBarPosition = $(this).scrollTop();
@@ -12,8 +12,8 @@ $(function () {
       $("header").removeClass("sticky");
     }
   });
-  /////////////
-  //6. Mobile Menu
+
+
   // Toggle the mobile menu and update mobile-menu-icon
   $(".mobile-btn").on("click", function (e) {
     e.stopPropagation(); // Prevent event propagation
@@ -50,6 +50,8 @@ $(function () {
   })
 
 
+
+  //category slider
   var ct_item_slider = new Swiper('.ct-item-slider', {
     loop: true,
     slidesPerView: "4",
@@ -80,8 +82,5 @@ $(function () {
     },
     
   });
-
-
-
   
 });
