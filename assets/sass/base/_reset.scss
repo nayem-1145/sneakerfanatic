@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  font-family: $body-font;
+  font-family: var(--body-font);
   font-size: 16px;
+  background: #F5F3F0;
 }
 
 input {

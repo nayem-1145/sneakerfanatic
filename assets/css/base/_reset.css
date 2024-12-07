@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: 16px; }
+
+input {
+  outline: 0; }
+
+select {
+  outline: 0;
+  border: 0; }
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0; }
+
+button {
+  border: 0;
+  background-color: transparent; }

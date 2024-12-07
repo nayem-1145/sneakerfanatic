@@ -6,3 +6,23 @@
     margin: 0 auto;
   }
 }
+
+.container-1400 {
+  max-width: 1424px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.ticker-primary {
+  color: var(--secondary-color);
+}
+
+.ticker-secondary {
+  color: var(--primary-color);
+}
+.secondery-color {
+  color: #f85200;
+}
+.white-color {
+  color: var(--white-color);
+}

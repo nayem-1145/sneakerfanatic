@@ -2,7 +2,7 @@
   width: 178px;
   height: 57px;
   font-size: 22px;
-  font-family: $heading-font;
+  font-family: var(--heading-font);
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
@@ -11,14 +11,14 @@
   overflow: hidden;
   transition: all 0.3s;
   font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 .primary-btn {
-  background-color: $secondary-color;
-  color: $white-color;
+  background-color: var(--primary-color);
+  color: var(--white-color);
 
   &::before {
     content: "";
@@ -40,8 +40,8 @@
   }
 }
 .white-btn {
-  background-color: $white-color;
-  color: $secondary-color;
+  background-color: var(--white-color);
+  color: var(--primary-color);
 
   &::before {
     content: "";

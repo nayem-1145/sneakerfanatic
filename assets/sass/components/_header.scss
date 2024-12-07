@@ -13,7 +13,7 @@ header {
     justify-content: center;
     padding: 14px 0px;
     gap: 22px;
-    border-bottom: 1px solid rgba($white-color, 0.3%);
+    border-bottom: 1px solid rgba(var(--white-color), 0.3%);
     .icon {
       display: inline-block;
       img {
@@ -24,7 +24,7 @@ header {
     a {
       padding: 5px 0;
       font-size: 18px;
-      color: $white-color;
+      color: var(--white-color);
       font-weight: 500;
       text-transform: uppercase;
     }
@@ -38,10 +38,10 @@ header {
     align-items: center;
     justify-content: space-between;
     .header-logo {
-      color: $white-color;
+      color: var(--white-color);
       font-size: 36px;
       font-weight: 700;
-      font-family: $heading-font;
+      font-family: var(--heading-font);
       text-transform: uppercase;
       @include screen-460 {
         font-size: 30px;
@@ -50,10 +50,10 @@ header {
     .nav {
       display: flex;
       gap: 50px;
-      margin-left: 205px;
+      margin-left: -150px;
       li {
         a {
-          color: $white-color;
+          color: var(--white-color);
           font-size: 18px;
           font-weight: 700;
           text-transform: uppercase;
@@ -63,7 +63,7 @@ header {
             content: "";
             width: 0%;
             height: 3px;
-            background: $white-color;
+            background: var(--white-color);
             transition: 0.3s;
             opacity: 0;
             top: 100%;
@@ -86,7 +86,6 @@ header {
       }
     }
     .user-cart {
-      margin-left: auto;
       display: flex;
       align-items: center;
       gap: 25px;
@@ -101,6 +100,31 @@ header {
             animation: 0.3s toLeftFromRight forwards;
           }
         }
+      }
+      @include screen-992 {
+        margin-left: auto;
+      }
+      @include screen-460 {
+        display: none !important;
+      }
+    }
+    .user-cart-2 {
+      display: none;
+      align-items: center;
+      gap: 25px;
+      a {
+        font-size: 22px;
+        color: #000;
+
+        &:hover {
+          i {
+            display: inline-block;
+            animation: 0.3s toLeftFromRight forwards;
+          }
+        }
+      }
+      @include screen-992 {
+        margin-left: auto;
       }
       @include screen-460 {
         display: none !important;
@@ -119,7 +143,7 @@ header {
         display: block;
         width: 100%;
         height: 3px;
-        background-color: $white-color;
+        background-color: var(--white-color);
         border-radius: 6px;
         transition: all 0.3s ease;
       }
@@ -162,21 +186,49 @@ header {
   width: 100%;
   z-index: 10;
   animation: 1s custom-fadeInDown;
-  background-color: $white-color;
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  .header-top {
+    display: none;
+  }
   .container {
     max-width: 100%;
     padding: 0;
-    background-color: $white-color;
+    background-color: var(--white-color);
+    padding: 0 10px;
 
     .content-wrapper {
       max-width: 1400px;
       margin: 0 auto;
-      .top {
-        display: none !important;
-      }
-      .bottom {
-        border-radius: 0;
-        box-shadow: none;
+      .header-nav {
+        .header-logo {
+          color: #000;
+        }
+        .nav {
+          margin-left: 0 !important;
+          li {
+            a {
+              color: #000;
+              &::after {
+                background: #000;
+              }
+            }
+          }
+        }
+        .user-cart {
+          display: none !important;
+        }
+        .user-cart-2 {
+          display: flex !important;
+          @include screen-460 {
+            display: none !important;
+          }
+        }
+        .mobile-menu-icon {
+          span {
+            background: #000;
+          }
+        }
       }
     }
   }
@@ -184,34 +236,36 @@ header {
 //********** Mobile menu **********//
 .mobile-menu {
   position: fixed;
-  background: $white-color;
+  background: var(--white-color);
   top: 0;
-  left: -350px;
-  width: 330px;
+  right: -100%;
+  width: 100%;
   height: 100vh;
   transition: all 0.3s;
+  z-index: 15;
+  overflow: scroll;
 
   &.active {
-    left: 0 !important;
+    right: 0% !important;
   }
   .top {
-    background: $secondary-color;
+    background: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 23px;
     .mobile-logo {
       a {
-        color: $white-color;
+        color: var(--white-color);
         font-size: 25px;
         font-weight: 700;
-        font-family: $heading-font;
+        font-family: var(--heading-font);
         text-transform: uppercase;
       }
     }
     .mobile-menu-icon {
       margin-left: 30px;
-      width: 30px;
+      width: 20px;
       height: 20px;
       cursor: pointer;
       display: flex;
@@ -222,7 +276,7 @@ header {
         display: block;
         width: 100%;
         height: 3px;
-        background-color: $white-color;
+        background-color: var(--white-color);
         border-radius: 6px;
         transition: all 0.3s ease;
       }
@@ -270,14 +324,14 @@ header {
         transition: 0.3s;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(var(--primary-color), 0.3%);
         .icon {
           display: inline-block;
           transform: rotate(0deg);
           transition: all 0.3s;
         }
         &:hover {
-          color: $secondary-color;
+          color: var(--primary-color);
           padding-left: 10px;
           .icon {
             transform: rotate(180deg);
@@ -290,7 +344,7 @@ header {
     padding: 23px;
     input {
       width: 100%;
-      border: 1px solid $secondary-color;
+      border: 1px solid var(--primary-color);
       padding: 10px;
       border-radius: 12px;
     }
@@ -298,6 +352,10 @@ header {
       margin-top: 20px;
       width: 100%;
       justify-content: center;
+      font-weight: 500;
+      height: 40px;
+      font-size: 17px;
+      letter-spacing: 2px;
     }
   }
 }

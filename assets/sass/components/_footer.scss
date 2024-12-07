@@ -2,51 +2,75 @@
 
 /******** Footer Top Start *******/
 .footer-section {
-  background-color: $footer-top-bg;
+  background-color: var(--footer-top-bg);
 }
 
 .footer-top {
   padding: 47px 0 20px 0;
 }
 
-.footer-title {
-  h3 {
-    font-size: 35px;
-    line-height: 45px;
-    max-width: 270px;
-    margin-bottom: 28px;
+.footer-item {
+  .footer-title {
+    h3 {
+      font-size: 35px;
+      line-height: 45px;
+      max-width: 270px;
+      margin-bottom: 28px;
+    }
   }
-}
+  .footer-email {
+    max-width: 260px;
+    border-bottom: 1px solid var(--primary-color);
+    justify-content: space-between;
 
-.footer-email {
-  gap: 30px;
-  max-width: 260px;
-  border-bottom: 1px solid $secondary-color;
-
-  input {
-    border: 0;
-    outline: 0;
-    background: transparent;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 26px;
-    font-family: $body-font;
+    input {
+      border: 0;
+      outline: 0;
+      background: transparent;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      font-family: var(--body-font);
+      width: 90%;
+    }
+    button {
+      padding: 0;
+    }
+  }
+  @include large-screen {
+    margin-bottom: 30px;
+    .footer-title {
+      h3 {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    .footer-email {
+      margin: 0 auto;
+    }
   }
 }
 
 .footer-widget {
+  @include portrait-phone {
+    margin-bottom: 20px;
+  }
   span {
-    color: $primary-color;
+    color: var(--secondary-color);
     font-size: 20px;
     line-height: 55px;
     font-weight: 700;
     text-transform: uppercase;
+    display: inline-block;
+    @include portrait-phone {
+      line-height: 40px;
+    }
   }
 
   .footer-content {
     margin-top: 40px;
     @include screen-400 {
-      margin-top: 20px;
+      margin-top: 0px;
     }
     li {
       margin-bottom: 15px;
@@ -55,16 +79,20 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 40px;
-        font-family: $body-font;
-        color: $primary-color;
-        transition: 0.3s;
+        font-family: var(--body-font);
+        color: var(--secondary-color);
+        transition: all 0.3s;
         @include screen-400 {
           font-size: 14px;
         }
 
         &:hover {
-          color: $secondary-color;
+          color: var(--primary-color);
+          margin-left: 10px;
         }
+      }
+      @include portrait-phone {
+        margin-bottom: 0px;
       }
     }
 
@@ -77,42 +105,47 @@
 /******** Footer Top End *******/
 
 /******** Footer Bottom Start *******/
+
 .footer-bottom-bg {
   left: 0;
-  top: -34px;
+  bottom: -5px;
   object-fit: cover;
-  width: 100%;
+  width: 1600px;
+  height: 100%;
   z-index: 1;
+  position: absolute;
 }
 
-.footer-bottom-bg-two {
-  left: 0;
-  top: 0;
-  object-fit: cover;
-  width: 100%;
-  z-index: 2;
+@media (min-width: 1600px) {
+  .footer-bottom-bg {
+    width: 100%;
+  }
 }
 
 .footer-bottom-content {
   padding: 80px 0 40px 0;
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
 .footer-bottom-copyright {
+  @include screen-992 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
   p {
-    color: $white-color;
+    color: var(--white-color);
     font-size: 16px;
     font-weight: 500;
     line-height: 26px;
-    font-family: $body-font;
+    font-family: var(--body-font);
 
     a {
-      color: $white-color;
+      color: var(--white-color);
       transition: 0.3s;
 
       &:hover {
-        color: $primary-color;
+        color: rgba(var(--white-color), 0.5);
       }
     }
   }
@@ -120,28 +153,37 @@
 
 .footer-logo {
   gap: 10px;
+  @include screen-992 {
+    justify-content: center !important;
+    margin-bottom: 20px;
+  }
 }
 
 .footer-thumb {
-  border: 1px solid $white-color;
+  border: 1px solid var(--white-color);
   border-radius: 6px;
-  padding: 5px 8px;
-  &:hover {
-    border-color: $primary-color;
-  }
+  width: 38px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 .footer-privacy {
   gap: 6px;
-
+  @include screen-992 {
+    justify-content: center !important;
+  }
   li {
-    color: $white-color;
+    color: var(--white-color);
 
     a {
-      color: $white-color;
+      color: var(--white-color);
       font-size: 16px;
       font-weight: 500;
       line-height: 26px;
-      font-family: $body-font;
+      font-family: var(--body-font);
     }
   }
 }

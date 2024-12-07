@@ -4,22 +4,24 @@
 /******** Custom Font ****************/
 @font-face {
   font-family: "OwnersNarrowBold";
-  src: url("../../fonts/owners-narrow-bold.woff2") format("woff2"),
-    url("../../fonts/owners-narrow-bold.woff") format("woff"),
-    url("../../fonts/owners-narrow-bold.ttf") format("truetype");
+  src: url("../fonts/owners-narrow-bold.woff2") format("woff2"),
+    url("../fonts/owners-narrow-bold.woff") format("woff"),
+    url("../fonts/owners-narrow-bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /******** root ****************/
-$primary-font: "OwnersNarrowBold", Arial, sans-serif;
-$body-font: "Poppins", sans-serif;
-$heading-font: $primary-font;
-$secondary-color: #f36a07;
-$primary-color: #121111;
+:root {
+  --primary-font: "OwnersNarrowBold", Arial, sans-serif;
+  --body-font: "Poppins", sans-serif;
+  --heading-font: var(--primary-font);
+  --primary-color: #f36a07;
+  --secondary-color: #121111;
 
-$text-color: #74787c;
-$white-color: #ffffff;
-$footer-top-bg: #ffe6d8;
-$border-color: #3d3d3d;
-$border-gray: #dedede;
-$border-dark: #242424;
+  --text-color: #74787c;
+  --white-color: #ffffff;
+  --footer-top-bg: #ffe6d8;
+  --border-color: #3d3d3d;
+  --border-gray: #dedede;
+  --border-dark: #242424;
+}
