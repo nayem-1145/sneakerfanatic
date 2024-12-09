@@ -1,0 +1,46 @@
+/********* Product Ticker start ********/
+.product-ticker-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    justify-content: center;
+
+    @include screen-1400{
+        flex-wrap: wrap;
+    }
+
+    @include portrait-phone {
+        gap: 20px;
+    }
+
+}
+
+.product-ticker-inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include screen-768{
+        width: 47%;
+    }
+    @include screen-768{
+        width: 47%;
+    }
+    @include screen-430{
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.ticker-kolom-before {
+    margin-left: 0;
+}
+
+.ticker-main-content {
+    letter-spacing: 1px;
+}
+
+.ticker-kolom-after {
+    @include portrait-phone {
+        display: none;
+    }
+}

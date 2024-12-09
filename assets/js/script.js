@@ -82,5 +82,50 @@ $(function () {
     },
     
   });
+    //////////// htw slider
+  var htwSlider = new Swiper('.htw-slider', {
+    loop: true,
+    slidesPerView: "3",
+    spaceBetween: 20,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1.3,
+        spaceBetween: 10,  
+
+      },
+      480: {
+        slidesPerView: 1.5, 
+        spaceBetween: 10,  
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView:3,
+      },
+      1920: {
+        slidesPerView: 3,
+      },
+    },
+    
+  });
+    //////////// 
+  var tickerSlider = new Swiper('.ticker-slider-wrapper', {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    speed: 4000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    }
+    
+  });
+
   
 });

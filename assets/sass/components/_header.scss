@@ -13,12 +13,13 @@ header {
     justify-content: center;
     padding: 14px 0px;
     gap: 22px;
-    border-bottom: 1px solid rgba(var(--white-color), 0.3%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     .icon {
       display: inline-block;
       img {
         width: 22px;
         height: 22px;
+        animation: spin 3s linear infinite;
       }
     }
     a {
@@ -29,7 +30,17 @@ header {
       text-transform: uppercase;
     }
     @include screen-768 {
-      display: none;
+      padding: 10px 0;
+      gap: 10px;
+      .icon{
+        img{
+          width: 17px;
+          height: 17px;
+        }
+      }
+      a{
+        font-size: 10px;
+      }
     }
   }
   .header-nav {
@@ -90,15 +101,14 @@ header {
       align-items: center;
       gap: 25px;
       a {
+        transition: 0.3s;
         img {
           width: 22px;
           height: 23px;
-          transition: 0.3s;
+          
         }
         &:hover {
-          img {
-            animation: 0.3s toLeftFromRight forwards;
-          }
+          margin-top: -10px;
         }
       }
       @include screen-992 {
@@ -176,6 +186,15 @@ header {
         display: flex;
       }
     }
+    @include portrait-phone{
+    padding: 10px 0 15px 0;
+      
+    }
+  }
+  @include screen-768{
+    position: inherit;
+    background-color: #F85200;
+    // border-bottom: 2px solid #F85200;
   }
 }
 /******* Sticky header***********/

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1650.001" height="136.58" viewBox="0 0 1650.001 136.58">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.425" gradientTransform="translate(0 -0.426) scale(1 1.853)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f8a436"/>
+      <stop offset="1" stop-color="#f85200"/>
+    </radialGradient>
+  </defs>
+  <path id="Subtraction_24" data-name="Subtraction 24" d="M-2363.006-556.2h-1650V-679.408c34.057-2.026,89.4-4.954,159.631-7.4,84.684-2.951,169.129-4.447,250.989-4.447,85.989,0,169.081,1.67,246.967,4.965,43.971,1.86,87.009,4.271,127.918,7.168,43.908,3.109,86.523,6.86,126.662,11.149,49.288,5.266,99.592,9.216,149.513,11.741,45.607,2.307,91.934,3.478,137.695,3.479h.07c54.334,0,109.083-1.644,162.725-4.886,44.916-2.715,89.548-6.578,132.658-11.48,76.556-8.705,130.083-18.561,155.175-23.661V-556.2Z" transform="translate(4013.007 692.782)" fill="url(#radial-gradient)"/>
+</svg>

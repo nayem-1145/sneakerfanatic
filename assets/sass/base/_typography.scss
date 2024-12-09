@@ -48,10 +48,16 @@ h2 {
 .h3,
 h3 {
   font-size: 35px;
+  text-transform: uppercase;
 
   @include screen-992 {
     font-size: 28px;
     text-transform: uppercase;
+    
+  }
+  @include portrait-phone {
+    line-height: 30px;
+
   }
 }
 .h4,
@@ -64,12 +70,12 @@ h4 {
 }
 .h5,
 h5 {
-  font-size: 26px;
+  font-size: 25px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 3px;
 
   @include screen-992 {
-    font-size: 28px;
+    font-size: 22px;
   }
 }

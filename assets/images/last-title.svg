@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="522" height="91" viewBox="0 0 522 91">
+  <g id="Group_629" data-name="Group 629" transform="translate(-648 -390)">
+    <text id="was_80.86" data-name="was £80.86" transform="translate(846 454)" fill="#bb3f00" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-197.969" y="0">WAS </tspan><tspan y="0" text-decoration="line-through">£80.86</tspan></text>
+    <text id="now" transform="translate(885 456)" fill="#852f00" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.05em" opacity="0.4"><tspan x="0" y="0">NOW</tspan></text>
+    <text id="now-2" data-name="now" transform="translate(883 454)" fill="#fff" font-size="35" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="0.05em"><tspan x="0" y="0">NOW</tspan></text>
+    <text id="_44.47" data-name="£44.47" transform="translate(962 464)" fill="#852f00" font-size="66" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" opacity="0.4"><tspan x="0" y="0">£44.47</tspan></text>
+    <text id="_44.47-2" data-name="£44.47" transform="translate(959 461)" fill="#fff" font-size="66" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">£44.47</tspan></text>
+    <line id="Line_22" data-name="Line 22" y2="34" transform="translate(863.5 425)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+  </g>
+</svg>
