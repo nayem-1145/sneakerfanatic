@@ -111,21 +111,51 @@ $(function () {
       1920: {
         slidesPerView: 3,
       },
+      2500: {
+        slidesPerView: 6,
+      },
     },
     
   });
     //////////// 
-  var tickerSlider = new Swiper('.ticker-slider-wrapper', {
-    loop: true,
-    slidesPerView: "auto",
-    spaceBetween: 20,
-    speed: 4000,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    }
-    
-  });
+    var tickerSlider = new Swiper('.ticker-slider-wrapper', {
+      loop: true,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      speed: 4000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      }
+    });
+ 
+
+  /////////////
+
+  //counter click to 1+
+const incrementButton = document.getElementById("increment");
+const decrementButton = document.getElementById("decrement");
+const counterDisplay = document.getElementById("counter");
+
+let count = 1; // Initial value of the counter
+
+// Increment function
+incrementButton.addEventListener("click", () => {
+  count++;
+  counterDisplay.textContent = count;
+});
+
+// Decrement function
+decrementButton.addEventListener("click", () => {
+  if (count > 1) {
+    // Prevent counter from going below 1
+    count--;
+    counterDisplay.textContent = count;
+  }
+});
+
+//////////////////
+
 
   
 });

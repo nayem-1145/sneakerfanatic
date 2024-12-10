@@ -1,0 +1,486 @@
+.product-header {
+    position: inherit;
+    background: var(--primary-color);
+}
+
+.product-ticker-slider {
+    margin-top: -35px;
+}
+
+.sc-htw-section {
+    padding: 100px 0 46px;
+    background: transparent !important;
+    position: relative;
+    z-index: 1;
+
+    @include portrait-phone {
+        padding: 40px 0;
+    }
+}
+
+.sc-htw-items {
+    @include screen-768 {
+        margin-top: 30px;
+
+        & .g-4 {
+            --bs-gutter-y: 12px;
+        }
+    }
+
+}
+
+.sc-htw-card {
+    background: #F64A00;
+    border: 2px solid #fff;
+    transition: 0.3s;
+    position: relative;
+
+    &:hover {
+        box-shadow: 10px 10px 23px 0px rgba(51, 26, 27, 0.5);
+    }
+
+    .htw-thumb {
+        margin: 0;
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    @include screen-768 {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 10px;
+
+        .htw-thumb {
+            width: 50%;
+        }
+
+        .sc-htw-content {
+            padding: 0;
+            text-align: left;
+        }
+    }
+
+    @include portrait-phone {
+        gap: 6px;
+    }
+
+    @include screen-1050 {
+        min-height: 440px;
+    }
+
+    @include screen-768 {
+        min-height: 0px;
+    }
+}
+
+.sc-htw-content {
+    background: #F64A00;
+    border-radius: 0 0 10px 10px;
+
+    h3 {
+        color: #fff;
+
+        @include portrait-phone {
+            letter-spacing: 1px;
+        }
+    }
+
+    p {
+        color: #F8CA36;
+
+        @include portrait-phone {
+            line-height: 20px;
+        }
+    }
+}
+
+.sc-htw-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.sc-htw-pen {
+    position: absolute;
+    left: -120px;
+    bottom: -26px;
+    z-index: 1;
+
+    @include screen-1460 {
+        left: -75px;
+    }
+
+    @include large-screen {
+        bottom: auto;
+    }
+
+    @include screen-768 {
+        display: none;
+    }
+}
+
+.htw-icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 2;
+
+    img {
+        @include portrait-phone {
+            width: 41px;
+            height: 41px;
+        }
+    }
+}
+
+.design-img-wrapper {
+    position: relative;
+
+    & h2 {
+        font-size: 172px;
+        line-height: 1.25;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+
+        @include screen-1400 {
+            font-size: 148px;
+        }
+
+        @include large-screen {
+            font-size: 119px;
+        }
+
+        @include screen-992 {
+            font-size: 88px;
+        }
+
+        @include screen-768 {
+            font-size: 10.9vw;
+        }
+        @include screen-400 {
+            font-size: 10.4vw;
+        }
+
+        & img {
+            position: absolute;
+            top: 46%;
+            transform: translateY(-46%);
+
+            @include large-screen {
+                max-width: 92%;
+            }
+        }
+    }
+}
+
+/*************************************/
+
+/******* Design Section Start***********/
+.design-section {
+    padding: 0px 0 65px;
+}
+
+.design-item {
+    margin: 0 30px;
+
+    @include portrait-phone {
+        margin: 0 10px;
+    }
+
+    @include screen-460 {
+        margin-top: 20px;
+    }
+}
+
+/******* Design Section End***********/
+
+/******* SC-User-Manual Start***********/
+.sc-user-manual {
+    padding: 40px 0;
+    position: relative;
+    z-index: 3;
+
+    @include large-screen {
+        padding: 40px 0 70px 0;
+    }
+
+    @include screen-992 {
+        padding: 40px 0 100px 0;
+    }
+}
+
+.sc-user-manual-bg {
+    position: absolute;
+    left: -27px;
+    top: 0;
+    width: calc(100% + 35px);
+    height: 100%;
+    z-index: -1;
+}
+
+.sc-user-manual-top {
+    @include large-screen {
+        margin-bottom: 40px;
+    }
+}
+
+.sc-user-manual-title {
+    @include screen-992 {
+        text-align: center !important;
+    }
+
+    h2 {
+        font-size: 80px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+
+        @include large-screen {
+            font-size: 60px;
+        }
+
+        @include portrait-phone {
+            font-size: 35px;
+        }
+    }
+}
+
+
+.user-manual-thumb {
+    margin-left: -350px;
+
+    img {
+        max-width: 950px;
+
+        @include screen-1400 {
+            max-width: 800px;
+        }
+
+        @include large-screen {
+            max-width: 600px;
+        }
+
+        @include portrait-phone {
+            max-width: 380px;
+        }
+    }
+
+    @include screen-1400 {
+        margin-left: -150px;
+    }
+
+    @include large-screen {
+        margin-left: -100px;
+    }
+
+    @include screen-992 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    @include portrait-phone {
+        text-align: start;
+    }
+}
+
+.user-manual-card {
+    background-color: var(--white-color);
+    padding: 45px 56px;
+    border-radius: 45px;
+
+    @include large-screen {
+        padding: 30px 35px;
+    }
+
+    @include portrait-phone {
+        padding: 20px;
+    }
+
+    ul {
+        li {
+            gap: 10px;
+
+            +li {
+                border-top: 1px solid rgba(112, 112, 112, 0.2);
+                margin-top: 20px;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+.user-manual-number {
+    width: 43px;
+    height: 43px;
+    background-color: #F8CA36;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    span {
+        font-size: 27px;
+        font-weight: 700;
+    }
+}
+
+.user-manual-content {
+    h4 {
+        font-size: 28px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+
+        @include large-screen {
+            font-size: 22px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 0px;
+        color: #151820;
+
+        @include large-screen {
+            font-size: 16px;
+        }
+    }
+}
+
+/******* SC-User-Manual-Single  End***********/
+/******* compare***********/
+.content-wrapper-position {
+    position: relative;
+}
+
+.compare-shape {
+    position: absolute;
+    left: 260px;
+    top: -40px;
+
+    @include screen-1400 {
+        left: 100px;
+        top: -40px;
+    }
+
+    @include screen-992 {
+        left: 20px;
+        top: -80px;
+    }
+
+    @include portrait-phone {
+        display: none;
+    }
+}
+
+/******* compare***********/
+
+
+
+
+/*** Week Section Start*****/
+.week-section {
+    z-index: 5;
+    padding: 120px 0;
+    position: relative;
+
+    @include screen-768 {
+        padding: 40px 0 90px 0;
+    }
+}
+
+.week-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.week-content-title {
+    h2 {
+        font-size: 170px;
+        color: var(--white-color);
+        line-height: 155px;
+
+        @include screen-1460 {
+            font-size: 120px;
+            line-height: 100px;
+        }
+
+        @include large-screen {
+            font-size: 90px;
+            line-height: 90px;
+        }
+
+        @include screen-460 {
+            font-size: 75px;
+            line-height: 75px;
+            text-align: center;
+        }
+
+        .week-content-span {
+            color: var(--secondary-color);
+        }
+    }
+}
+
+.week-content-card {
+    gap: 13px;
+    align-items: center;
+}
+
+.week-content-subtitle {
+    span {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 42px;
+        color: var(--secondary-color);
+
+        @include screen-460 {
+            font-size: 17px;
+        }
+    }
+}
+
+.week-content-icon {
+    width: 23px;
+    height: 23px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+
+.week-content-btn {
+    @include portrait-phone {
+        text-align: center;
+    }
+}
+
+.week-thumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1px;
+
+    img {
+        width: calc(33% - 2px);
+        border-radius: 20px;
+        border: 1px solid #F8CA36;
+    }
+
+    @include screen-992 {
+        text-align: center;
+    }
+}
+
+/*** Week Section End*****/

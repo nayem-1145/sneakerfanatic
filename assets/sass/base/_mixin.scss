@@ -43,6 +43,12 @@
   }
 }
 
+@mixin screen-1050 {
+  @media (max-width: 1050px) {
+    @content;
+  }
+}
+
 @mixin large-screen {
   @media (max-width: 1199.98px) {
     @content;
